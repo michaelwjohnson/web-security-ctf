@@ -28,7 +28,7 @@ def init_db():
     )
     c.execute(
         "INSERT OR IGNORE INTO users VALUES (?, ?, ?)",
-        ("admin", "admin_is_easy_to_guess", "admin"),
+        ("admin", "admin123", "admin"),
     )
 
     # Commit the changes to the database

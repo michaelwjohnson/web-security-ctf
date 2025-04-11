@@ -71,17 +71,6 @@ This CTF demonstrates several important security concepts:
 3. **Access Control**: Implement proper authorization checks for sensitive endpoints
 4. **Session Management**: Verify user roles and permissions on each sensitive request
 
-## Prevention Measures
-
-To secure similar vulnerabilities in real applications:
-
-1. Use prepared statements or ORMs for database queries
-2. Implement strong password policies
-3. Use proper authentication and authorization mechanisms
-4. Apply the principle of least privilege
-5. Implement proper session management
-6. Use security headers and CSRF protection
-
 ## Note
 
 This is an educational CTF challenge. The vulnerabilities demonstrated here are intentional for learning purposes. Never implement these patterns in production applications.
