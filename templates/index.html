@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Security CTF Challenge</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      .challenge-intro {
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      .login-button {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Web Security CTF Challenge</h1>
+
+    <div class="challenge-intro">
+      <h2>Welcome, Challenger!</h2>
+      <p>
+        Your mission is to gain administrative access to this web application
+        and retrieve the hidden flag.
+      </p>
+
+      <h3>Challenge Objectives:</h3>
+      <ul>
+        <li>Find a way to login without knowing the correct credentials</li>
+        <li>Escalate your privileges to admin</li>
+        <li>Retrieve the hidden flag</li>
+      </ul>
+
+      <p>
+        <strong>Hint:</strong> Not all is as it seems with this login page.
+        Think creatively about how databases work!
+      </p>
+    </div>
+
+    <a href="/login" class="login-button">Start Challenge</a>
+  </body>
+</html>

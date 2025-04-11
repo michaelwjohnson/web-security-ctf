@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <h2>Welcome, {{ username }}!</h2>
+    <p>Your Role: {{ role }}</p>
+
+    {% if role == 'admin' %}
+    <img src="https://media1.tenor.com/m/ziYPbHs_Zc8AAAAC/admin-admin-access.gif" alt="You get admin Oprah">
+    <br>
+    <a href="/flag">Get Flag</a>
+    <br>
+    <br>
+    <form action="/logout" method="get" style="display:inline;">
+      <input type="submit" value="Logout"></input>
+    </form>
+    {% endif %}
+
+    {% if role == 'user' %}
+    <img src="https://y.yarn.co/62365c24-3073-4a2e-b6dd-21fa7f54d422_text.gif" alt="Tron user gif">
+    <br>
+    <form action="/logout" method="get" style="display:inline;">
+      <input type="submit" value="Logout"></input>
+    </form>
+    {% endif %}
+  </body>
+</html>
+

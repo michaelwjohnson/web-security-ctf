@@ -1,0 +1,9 @@
+services:
+  ctf:
+    build: .
+    container_name: ctf-web-challenge
+    ports:
+      - "8080:8080"
+    environment:
+      - FLASK_APP=flaskApp.py
+    restart: unless-stopped
