@@ -8,6 +8,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 app = Flask(__name__)
 app.secret_key = "supersecretkey123"  # Intentionally weak for demo purposes
 
+
 # Initialize the database
 def init_db():
     # Connect to the database
@@ -48,23 +49,21 @@ def index():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    # Warning: This code is intentionally vulnerable to SQL injection!
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
-
-        # Create a tuple of user input
-        user_input = (username, password)
 
         # Connect to the database
         conn = sqlite3.connect("users.db")
         c = conn.cursor()
 
         # Execute the SQL query with the user input
-        query = "SELECT * FROM users WHERE username = ? AND password = ?"
+        query = "SELECT * FROM users WHERE username = '{}' AND password = '{}'".format(
+            username, password
+        )
 
         try:
-            c.execute(query, user_input)
+            c.execute(query)
             user = c.fetchone()
             if user:
                 # Login successful!
