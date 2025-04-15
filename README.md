@@ -35,13 +35,13 @@ Alternatively, you can pull the pre-built Docker image from Docker Hub and run i
 1. Pull the Docker image from Docker Hub:
 
    ```bash
-   docker pull michaelwjohnson/web-security-ctf
+   docker pull michaelwayne/web-security-ctf
    ```
 
 2. Run the Docker image:
 
    ```bash
-   docker run -p 8080:8080 michaelwjohnson/web-security-ctf
+   docker run -p 8080:8080 michaelwayne/web-security-ctf
    ```
 
 This will start the CTF container and make it available on port <http://localhost:8080>
